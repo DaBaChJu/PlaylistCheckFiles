@@ -1,0 +1,16 @@
+﻿<Window x:Class="Plcheck.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Playlist Check" Height="480" Width="720"
+	DragDrop.DragOver="Window_DragOver"  DragDrop.Drop="Window_Drop" AllowDrop="True"
+	>
+	<Window.Resources>
+		<ContextMenu x:Key="ListItemContextMenu">
+			<MenuItem Click="MenuItem_Click" Header="Copier"></MenuItem>
+		</ContextMenu>
+	</Window.Resources>
+	<DockPanel>
+		<ProgressBar Name="progress" Height="20" DockPanel.Dock="Bottom"/>
+		<ListBox Name="liste"/>
+	</DockPanel>
+</Window>
